@@ -1,0 +1,49 @@
+// 布局 — 间距 / 边框几何 / 阴影 / 圆角（颜色在 colors.kdl）
+// https://niri-wm.github.io/niri/Configuration:-Layout
+
+layout {
+    // 窗口间距（逻辑像素）
+    gaps 16
+
+    // 切换焦点时列的对齐方式: "never" / "always" / "on-overflow"
+    center-focused-column "never"
+
+    // Mod+R 循环切换的预设列宽
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        // fixed 1920
+    }
+
+    // 新窗口默认宽度（{} = 由窗口自行决定）
+    default-column-width { proportion 0.5; }
+
+    // 焦点环：只画在聚焦窗口周围
+    focus-ring {
+        // off
+        width 2
+    }
+
+    // 常驻边框：所有窗口都画（与焦点环二选一）
+    border {
+        off
+        width 4
+        urgent-color "#9b0000"
+    }
+
+    // 窗口阴影
+    shadow {
+        // on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    // 外部留白（类似屏幕边缘 gaps）
+    // struts {
+    //     left 64
+    //     top 64
+    // }
+}

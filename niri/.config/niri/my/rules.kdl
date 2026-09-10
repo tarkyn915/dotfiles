@@ -1,0 +1,26 @@
+// 窗口规则 — 匹配特定窗口并调整行为
+// https://niri-wm.github.io/niri/Configuration:-Window-Rules
+
+// 所有窗口：12px 圆角 + 裁剪内容
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+// WezTerm 初始宽度 bug 规避
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Firefox 画中画默认浮动
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// 示例：密码管理器禁止被截屏
+// window-rule {
+//     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+//     block-out-from "screen-capture"
+// }

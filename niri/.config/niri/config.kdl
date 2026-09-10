@@ -1,0 +1,7 @@
+// 自己的模块（相对路径基于本文件所在目录）
+include "my/input.kdl"
+include "my/layout.kdl"
+include "my/colors.kdl"     // 颜色必须在 layout 之后
+include "my/rules.kdl"
+include "my/binds.kdl"
+include "my/misc.kdl"

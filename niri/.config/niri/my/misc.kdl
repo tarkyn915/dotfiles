@@ -1,0 +1,21 @@
+// 杂项 — 自启动 / 外观开关 / 截图路径 / 动画
+// https://niri-wm.github.io/niri/Configuration:-Miscellaneous
+
+// 自启动
+spawn-at-startup "kanshi"
+spawn-at-startup "waybar"
+
+// 让应用尽量去掉客户端装饰（CSD），niri 边框画在窗口周围。
+// 对已打开的应用需要重启该应用才生效。
+prefer-no-csd
+
+// 截图保存路径（支持 strftime 格式，~ 开头展开为家目录）
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+// screenshot-path null   // 不保存到磁盘
+
+// 动画
+// https://niri-wm.github.io/niri/Configuration:-Animations
+animations {
+    // off
+    // slowdown 3.0
+}

@@ -1,0 +1,11 @@
+# 程序自动生成 / 自动管理的文件，不进仓库
+niri/.config/niri/dms/
+niri/.config/niri/back/
+
+# 备份文件
+*.bak
+*.backup-*
+*.dmsbackup*
+
+# 系统垃圾
+.DS_Store

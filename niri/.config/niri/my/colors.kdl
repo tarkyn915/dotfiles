@@ -1,0 +1,16 @@
+// 配色 — 焦点环 / 边框 / 阴影颜色（几何参数在 layout.kdl）
+// 注意：include 的位置性 —— 骨架里此文件必须排在 layout.kdl 之后才能覆盖颜色
+
+layout {
+    focus-ring {
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+        // 渐变示例（优先于纯色）：
+        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+    }
+
+    border {
+        active-color "#ffc87f"
+        inactive-color "#505050"
+    }
+}

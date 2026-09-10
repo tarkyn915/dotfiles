@@ -1,0 +1,32 @@
+// 输入设备 — 键盘 / 触摸板 / 鼠标
+// https://niri-wm.github.io/niri/Configuration:-Input
+
+input {
+    keyboard {
+        // 启动时开启小键盘
+        numlock
+
+        // xkb 布局示例：
+        // xkb {
+        //     layout "us,ru"
+        //     options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+        // }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        // dwt            // 打字时禁用触摸板
+        // accel-speed 0.2
+        // accel-profile "flat"
+    }
+
+    mouse {
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+    }
+
+    // 鼠标移入窗口自动聚焦：
+    // focus-follows-mouse max-scroll-amount="0%"
+}
