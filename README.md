@@ -6,34 +6,22 @@
 
 | 包 | 内容 |
 |---|---|
-| niri | Wayland 合成器配置（config.kdl + my/ 模块化拆分） |
-| kitty | 终端配置 |
+| niri | config.kdl + my 模块 |
+| kitty | kitty.conf |
 
 ## 新机器恢复
 
 ```bash
 # 1. 装依赖
-sudo pacman -S stow niri kitty
+sudo pacman -S stow
 
 # 2. clone 并部署
-git clone https://github.com/<用户名>/my_config.git ~/my_config
+git clone https://github.com/username/my_config.git ~/my_config
 cd ~/my_config
 stow niri kitty
 ```
 
-## 日常修改流程
-
-```bash
-# 改配置（路径和以前完全一样，软链接透明）
-vim ~/.config/niri/my/layout.kdl
-
-# 存档
-cd ~/my_config
-git add -A && git commit -m "描述改了啥" && git push
-```
-
 ## 备注
 
-- `niri/.config/niri/dms/` 由 DankMaterialShell 自动生成，已 gitignore。
-- niri include 是位置性的：后面的覆盖前面的。模块按骨架中的顺序加载。
-- 改完配置 niri 自动热重载；语法不确定时跑 `niri validate`。
+- 改完配置 niri 自动热重载；语法不确定时跑 `niri validate`
+- kitty只用 `kitty.conf`
