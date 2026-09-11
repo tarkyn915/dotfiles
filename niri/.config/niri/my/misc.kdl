@@ -5,6 +5,14 @@
 spawn-at-startup "kanshi"
 spawn-at-startup "waybar"
 
+// 字体渲染环境变量 —— 影响所有继承 niri 环境的应用（含 Electron/Qt/GTK）
+environment {
+    // 强制 Qt 字体 DPI，避免 Wayland 下 Electron/Qt 应用字体发虚
+    // 值为 96 * 缩放比例；当前输出 scale 1.0，故用 96
+    // 若之后开启分数缩放（scale 1.25 / 1.5），同步改为 120 / 144
+    QT_FONT_DPI "96"
+}
+
 // 让应用尽量去掉客户端装饰（CSD），niri 边框画在窗口周围。
 // 对已打开的应用需要重启该应用才生效。
 prefer-no-csd
