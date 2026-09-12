@@ -4,12 +4,15 @@
 
 ## 包含
 
-| 包 | 内容 |
-|---|---|
-| niri | config.kdl + my 模块 |
-| kitty | kitty.conf |
-| ghostty | config.ghostty |
-| typora | darkkk.css  纯黑主题 |
+| 软件包   | 配置文件                      | 默认目录                           |
+| -------- | ----------------------------- | ---------------------------------- |
+| niri     | config.kdl + my 模块          | ~/.config/niri/config.kdl          |
+| kitty    | kitty.conf                    | ~/.config/kitty/kitty.conf         |
+| ghostty  | config.ghostty + shaders 模块 | ~/.config/ghostty/config.ghostty   |
+| typora   | darkkk.css                    | ~/.config/Typora/themes/darkkk.css |
+| starship | starship.toml                 | ~/.config/starship.toml            |
+
+
 
 ## 新机器恢复
 
@@ -32,8 +35,9 @@ stow typora
 
 - 配置 niri 自动热重载，语法检测 `niri validate`
 - kitty只用 `kitty.conf`
-- ghostty只用 `config.ghostty` 
-- typora中只有一个css `darkkk.css`
+- ghostty 重载配置文件 `ctrl + shift + ,` shaders模块 https://github.com/sahaj-b/ghostty-cursor-shaders
+- typora 重新打开窗口在theme中选择 `darkkk.css`
+- starship需要在不同shell中添加配置 https://starship.rs/zh-CN/guide/
 
 ## Niri 设定快捷键
 
