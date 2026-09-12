@@ -1,0 +1,102 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# 整体格式：时间 · 路径 · git 状态 · 上一条命令耗时 · 换行 · 提示符
+format = "$time$hostname$battery$status$directory$git_branch$git_state$git_status$cmd_duration$line_break$character"
+
+[time]
+disabled = false
+format = "[$time]($style) "
+style = "bright-black"
+use_12hr = false
+time_format = "%T"
+
+[battery]
+full_symbol = "full "
+charging_symbol = "+ "
+discharging_symbol = "- "
+format = "[$symbol$percentage]($style) "
+
+[[battery.display]]
+threshold = 40
+discharging_symbol = "- "
+
+[status]
+disabled = false
+symbol = "x "
+format = "[$symbol$status]($style) "
+
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold green)"
+vimcmd_visual_symbol = "[<](bold yellow)"
+vimcmd_replace_symbol = "[<](bold purple)"
+vimcmd_replace_one_symbol = "[<](bold purple)"
+
+[git_commit]
+tag_symbol = " tag "
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+# ============================================
+# 备用模块 —— 要用时取消注释，并在 format 里加 $xxx
+# ============================================
+
+# ---- 编程语言（cd 进对应项目才显示版本号）----
+
+# [nodejs]
+# symbol = "node "
+# format = "[$symbol($version )]($style)"
+
+# [python]
+# symbol = "py "
+# format = "[$symbol($version )]($style)"
+
+# [rust]
+# symbol = "rs "
+# format = "[$symbol($version )]($style)"
+
+# [golang]
+# symbol = "go "
+# format = "[$symbol($version )]($style)"
+
+# [java]
+# symbol = "java "
+# format = "[$symbol($version )]($style)"
+
+# [lua]
+# symbol = "lua "
+# format = "[$symbol($version )]($style)"
+
+# [c]
+# symbol = "C "
+# format = "[$symbol($version )]($style)"
+
+# [cpp]
+# symbol = "C++ "
+# format = "[$symbol($version )]($style)"
+
+# ---- 云 / 容器（检测到对应 CLI 上下文才显示）----
+
+# [docker_context]
+# symbol = "docker "
+
+# [kubernetes]
+# symbol = "k8s "
+
+# [aws]
+# symbol = "aws "
+
+# [gcloud]
+# symbol = "gcp "
+
+# [azure]
+# symbol = "az "
+
+
