@@ -1,4 +1,4 @@
-# my_config
+# my_dotfiles
 
 个人 Linux 配置文件（dotfiles），用 GNU stow 结构管理。
 
@@ -8,7 +8,8 @@
 |---|---|
 | niri | config.kdl + my 模块 |
 | kitty | kitty.conf |
-| ghostty | config.ghostty（独立于 kitty,与 kitty 配置并存） |
+| ghostty | config.ghostty |
+| typora | darkkk.css  纯黑主题 |
 
 ## 新机器恢复
 
@@ -17,15 +18,22 @@
 sudo pacman -S stow
 
 # 2. clone 并部署
-git clone https://github.com/username/my_config.git ~/my_config
-cd ~/my_config
-stow niri kitty
+git clone https://github.com/tarkyn915/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+
+# 3. 删除原本默认的配置，用stow链接接管配置文件
+stow niri
+stow ghostty
+stow typora
+···
 ```
 
 ## 备注
 
-- 改完配置 niri 自动热重载；语法不确定时跑 `niri validate`
+- 配置 niri 自动热重载，语法检测 `niri validate`
 - kitty只用 `kitty.conf`
+- ghostty只用 `config.ghostty` 
+- typora中只有一个css `darkkk.css`
 
 ## Niri 设定快捷键
 
@@ -57,7 +65,6 @@ Mod+page_up   向上切换工作区
 Mod+U   	  向下切换工作区
 Mod+I   	  向上切换工作区
 Mod+1/2/3     切换1/2/3工作区
-
 
 ```
 

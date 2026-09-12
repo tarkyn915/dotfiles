@@ -1,6 +1,8 @@
-# 程序自动生成 / 自动管理的文件，不进仓库
+# dms自动生成的niri配置
 niri/.config/niri/dms/
-niri/.config/niri/back/
+# dms自动生成的kitty配置
+kitty/.config/kitty/dank*
+
 
 # 备份文件
 *.bak
