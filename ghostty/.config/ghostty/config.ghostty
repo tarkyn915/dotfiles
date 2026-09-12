@@ -56,3 +56,7 @@ copy-on-select = clipboard
 # 粘贴保护:防止复制的内容里藏恶意换行符直接被执行
 clipboard-paste-protection = true
 clipboard-paste-bracketed-safe = true
+
+# === 光标拖尾特效 (Neovide 风格 warp) ===
+custom-shader = shaders/cursor_warp.glsl
+custom-shader-animation = always
