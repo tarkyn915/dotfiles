@@ -8,6 +8,7 @@
 |---|---|
 | niri | config.kdl + my 模块 |
 | kitty | kitty.conf |
+| ghostty | config.ghostty（独立于 kitty,与 kitty 配置并存） |
 
 ## 新机器恢复
 

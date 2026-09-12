@@ -1,10 +1,13 @@
 // 窗口规则 — 匹配特定窗口并调整行为
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
-// 所有窗口：12px 圆角 + 裁剪内容
+// 所有窗口：12px 圆角 + 裁剪内容 + 毛玻璃
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+        background-effect {
+            blur true
+    }
 }
 
 // WezTerm 初始宽度 bug 规避
