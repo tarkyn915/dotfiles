@@ -1,0 +1,58 @@
+# reload-config  :  Ctrl + Shift + ,
+
+# === font ===
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 16
+
+# === 窗口外观 ===
+window-padding-x = 10
+window-padding-y = 10
+background-opacity = 0.6
+
+# 毛玻璃背景模糊(macOS sup :12 温和 / 20 中等 / 30+ 重度)
+background-blur-radius = 20
+
+# 保持系统原生窗口边框/阴影
+window-decoration = true
+
+# 退出带有正在运行进程的终端时不二次弹窗确认
+confirm-close-surface = false
+
+# === 光标设置 ===
+cursor-style = bar
+cursor-style-blink = true
+adjust-cursor-thickness = 1
+cursor-color = #f5e0e6
+cursor-text = #1e1e2e
+
+# ===关闭音频报警声===
+bell-audio-volume = 0.0
+
+# === 滚动回滚缓冲区 ===
+scrollback-limit = 10000
+
+# === 主题 / 配色方案 ===
+theme = Catppuccin Mocha
+
+# 额外对齐 selection 与光标高亮（内置主题已有，这里保留你的指定色覆盖）
+selection-foreground = #1e1e2e
+selection-background = #585b70
+
+
+# === Shell 集成 ===
+# 让 ghostty 理解终端里在做什么:新 tab/分屏继承当前目录、标题显示命令、
+# 解锁 cursor-click-to-move 等功能
+shell-integration = bash
+
+# === 窗口外观 ===
+# 平铺 WM(niri)必开:窗口尺寸不能整除字符单元格时,把余量均分到两侧,
+# 避免右侧/底部出现不均匀的空隙
+window-padding-balance = true
+
+# === 剪贴板 ===
+# 鼠标选中文字立即复制到系统剪贴板(不用再按 Ctrl+Shift+C)
+copy-on-select = clipboard
+
+# 粘贴保护:防止复制的内容里藏恶意换行符直接被执行
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
