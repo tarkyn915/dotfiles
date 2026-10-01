@@ -16,10 +16,12 @@ input {
     touchpad {
         tap
         natural-scroll
-        // dwt            // 打字时禁用触摸板
-        // accel-speed 0.2
-        // accel-profile "flat"
+	// 触控板滚动速度
+	scroll-factor 0.3
+        accel-profile "flat"
+        accel-speed 0.0
     }
+
 
     mouse {
         // natural-scroll

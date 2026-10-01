@@ -3,7 +3,7 @@
 
 binds {
     // 应用
-    Mod+Space hotkey-overlay-title="应用启动器" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+Space hotkey-overlay-title="应用启动器" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+E hotkey-overlay-title="打开文件管理器" { spawn "nautilus"; }
     Mod+T     { spawn "ghostty"; }
 

@@ -5,3 +5,4 @@ include "my/colors.kdl"     // 颜色必须在 layout 之后
 include "my/rules.kdl"
 include "my/binds.kdl"
 include "my/misc.kdl"
+include "my/display.kdl"
