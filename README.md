@@ -7,10 +7,12 @@
 | 软件包   | 配置文件                      | 默认目录                           |
 | -------- | ----------------------------- | ---------------------------------- |
 | niri     | config.kdl + my 模块          | ~/.config/niri/config.kdl          |
+| noctalia | settings.toml + palettes      | ~/.config/noctalia/settings.toml   |
 | kitty    | kitty.conf                    | ~/.config/kitty/kitty.conf         |
 | ghostty  | config.ghostty + shaders 模块 | ~/.config/ghostty/config.ghostty   |
 | typora   | darkkk.css                    | ~/.config/Typora/themes/darkkk.css |
 | starship | starship.toml                 | ~/.config/starship.toml            |
+| wallpapers | 壁纸库（Noctalia 读取）     | ~/dotfiles/wallpapers              |
 
 
 
@@ -26,6 +28,7 @@ cd ~/dotfiles
 
 # 3. 删除原本默认的配置，用stow链接接管配置文件
 stow niri
+stow noctalia
 stow ghostty
 stow typora
 ···
@@ -44,12 +47,12 @@ stow typora
 ```
 # 这里只列出了常用的快捷键，并不是全部内容
 # 应用
-Mod+Space	应用启动器  DMS spotlight 
+Mod+Space	应用启动器  Noctalia launcher 
 Mod+T	    默认终端    kitty
 Mod+E		文件管理器  nautilus
 
 # 系统
-Mod+Alt+L          DMS锁屏
+Mod+Alt+L          锁屏（Noctalia）
 Mod+Shift+Slash    速查表
 Mod+Shift+Q        电源菜单
 

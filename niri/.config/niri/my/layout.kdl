@@ -3,7 +3,7 @@
 
 layout {
     // 窗口间距（逻辑像素）
-    gaps 8
+    gaps 6
 
     // 切换焦点时列的对齐方式: "never" / "always" / "on-overflow"
     center-focused-column "never"

@@ -3,7 +3,9 @@
 
 // 自启动
 spawn-at-startup "kanshi"
-spawn-at-startup "waybar"
+spawn-at-startup "noctalia" "-d"
+// polkit 认证代理 —— 提权时弹密码授权窗口（装驱动/改系统设置等场景）
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 // 字体渲染环境变量 —— 影响所有继承 niri 环境的应用（含 Electron/Qt/GTK）
 environment {
