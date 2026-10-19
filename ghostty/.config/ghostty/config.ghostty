@@ -1,7 +1,9 @@
 # reload-config  :  Ctrl + Shift + ,
 
 # === font ===
-font-family = "JetBrainsMono Nerd Font Mono"
+# 空值 = 用 Ghostty 内置的 JetBrains Mono(自带 nerd font 图标回退,不依赖系统字体)
+# 装了 "JetBrainsMono Nerd Font Mono" 的机器想用它,把这行改回该字体名即可
+font-family =
 font-size = 14
 
 # === 窗口外观 ===
@@ -9,8 +11,9 @@ window-padding-x = 10
 window-padding-y = 10
 background-opacity = 0.6
 
-# 毛玻璃背景模糊(macOS sup :12 温和 / 20 中等 / 30+ 重度)
-background-blur-radius = 20
+# 毛玻璃背景模糊(12 温和 / 20 中等 / 30+ 重度)
+# 1.3+ 的新写法:background-blur 直接跟半径(旧的 background-blur-radius 已废弃)
+background-blur = 20
 
 # 保持系统原生窗口边框/阴影
 window-decoration = true
@@ -42,7 +45,8 @@ selection-background = #585b70
 # === Shell 集成 ===
 # 让 ghostty 理解终端里在做什么:新 tab/分屏继承当前目录、标题显示命令、
 # 解锁 cursor-click-to-move 等功能
-shell-integration = bash
+# detect = 按实际启动的 shell(bash/zsh/fish) 自动启用,多机通用
+shell-integration = detect
 
 # === 窗口外观 ===
 # 平铺 WM(niri)必开:窗口尺寸不能整除字符单元格时,把余量均分到两侧,
